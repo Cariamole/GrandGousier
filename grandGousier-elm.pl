@@ -1,5 +1,7 @@
 :- use_module(library(lists)).
 
+:-[regles].
+
 /* --------------------------------------------------------------------- */
 /*                                                                       */
 /*        PRODUIRE_REPONSE(L_Mots,L_Lignes_reponse) :                    */
@@ -28,10 +30,11 @@ produire_reponse([fin],[L1]) :-
    L1 = [merci, de, m, '\'', avoir, consulte], !.    
 
 produire_reponse(L,Rep) :-
-%   write(L),
-   mclef(M,_), member(M,L),
+   write(L),
+   rewrite(L,NL),
+   mclef(M,_), member(M,NL),
    clause(regle_rep(M,_,Pattern,Rep),Body),
-   match_pattern(Pattern,L),
+   match_pattern(Pattern,NL),
    call(Body), !.
 
 produire_reponse(_,[L1,L2, L3]) :-
@@ -110,45 +113,16 @@ mclef(prix,10).
 mclef(vin,5).
 mclef(vins,5).
 mclef(bonjour,1).
+mclef(rouge,5).
+
+simil(salut,bonjour).
+rewrite([], []).
+rewrite([Mot|Reste], [New|NewReste]) :-
+    ( simil(Mot, New) ; New = Mot ),
+    rewrite(Reste, NewReste).
 
 
 % ----------------------------------------------------------------%
-
-regle_rep(bouche,1,
-  [ que, donne, le, Vin, en, bouche ],
-  Rep ) :-
-
-     bouche(Vin,Rep).
-
-% ----------------------------------------------------------------%
-
-regle_rep(vins,2,
-  [ auriezvous, des, vins, entre, X, et, Y, eur ],
-  Rep) :-
-
-     lvins_prix_min_max(X,Y,Lvins),
-     rep_lvins_min_max(Lvins,Rep).
-   
-rep_lvins_min_max([], [[ non, '.' ]]).
-rep_lvins_min_max([H|T], [ [ oui, '.', je, dispose, de ] | L]) :-
-   rep_litems_vin_min_max([H|T],L).
-
-rep_litems_vin_min_max([],[]) :- !.
-rep_litems_vin_min_max([(V,P)|L], [Irep|Ll]) :-
-   nom(V,Appellation),
-   Irep = [ '- ', Appellation, '(', P, ' EUR )' ],
-   rep_litems_vin_min_max(L,Ll).
-
-prix_vin_min_max(Vin,P,Min,Max) :-
-   prix(Vin,P),
-   Min =< P, P =< Max.
-
-lvins_prix_min_max(Min,Max,Lvins) :-
-   findall( (Vin,P) , prix_vin_min_max(Vin,P,Min,Max), Lvins ).
-
-regle_rep(bonjour,1,[bonjour],Rep):-
-   Rep=[['bonjour','posez','une','question','et','je','serai','ravi','d’','essayer','d','y','répondre']].
-   
 
 
 
