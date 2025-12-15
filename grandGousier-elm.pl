@@ -109,6 +109,7 @@ mclef(nez,10).
 mclef(prix,10).
 mclef(vin,5).
 mclef(vins,5).
+mclef(bonjour,1).
 
 
 % ----------------------------------------------------------------%
@@ -127,7 +128,7 @@ regle_rep(vins,2,
 
      lvins_prix_min_max(X,Y,Lvins),
      rep_lvins_min_max(Lvins,Rep).
-
+   
 rep_lvins_min_max([], [[ non, '.' ]]).
 rep_lvins_min_max([H|T], [ [ oui, '.', je, dispose, de ] | L]) :-
    rep_litems_vin_min_max([H|T],L).
@@ -144,6 +145,9 @@ prix_vin_min_max(Vin,P,Min,Max) :-
 
 lvins_prix_min_max(Min,Max,Lvins) :-
    findall( (Vin,P) , prix_vin_min_max(Vin,P,Min,Max), Lvins ).
+
+regle_rep(bonjour,1,[bonjour],Rep):-
+   Rep=[['bonjour','posez','une','question','et','je','serai','ravi','d’','essayer','d','y','répondre']].
    
 
 
