@@ -55,5 +55,5 @@ prix(v3,5.66).
 robe(v3,[['jolie','robe','grenat','aux','reflets','rubis']]).
 nez(v3,[['nez','tendrement','parfume','de','fruits','rouges']]).
 bouche(v3,[['une robe rouge complete et douce comme un soir d','\'','ete']]).
-description(v3,['un','joli','vin','classique','polyvalent','avec','un','bel','eventail','aromatique','et','des','tannins','fins']).
+description(v3,[['un','joli','vin','classique','polyvalent','avec','un','bel','eventail','aromatique','et','des','tannins','fins']]).
 
