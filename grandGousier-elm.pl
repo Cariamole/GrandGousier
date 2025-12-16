@@ -1,6 +1,8 @@
 :- use_module(library(lists)).
 
 :-[regles].
+:-[langage].
+:-[vins].
 
 /* --------------------------------------------------------------------- */
 /*                                                                       */
@@ -30,17 +32,15 @@ produire_reponse([fin],[L1]) :-
    L1 = [merci, de, m, '\'', avoir, consulte], !.    
 
 produire_reponse(L,Rep) :-
-   write(L),
-   rewrite(L,NL),
-   mclef(M,_), member(M,NL),
+   %write(L),
+   mclef(M,_), member(M,L),
    clause(regle_rep(M,_,Pattern,Rep),Body),
-   match_pattern(Pattern,NL),
-   call(Body), !.
+   match_pattern(Pattern,L),
+   call(Body),!.
 
-produire_reponse(_,[L1,L2, L3]) :-
+produire_reponse(_,[L1,L2]) :-
    L1 = [je, ne, sais, pas, '.'],
-   L2 = [les, etudiants, vont, m, '\'', aider, '.' ],
-   L3 = ['vous le verrez !'].
+   L2 = [veuillez,reessayer,dans,d,'\'',autres,termes].
 
 match_pattern(Pattern,Lmots) :-
    nom_vins_uniforme(Lmots,L_mots_unif),
@@ -87,25 +87,6 @@ replace_vin(L,X,[H|In],[H|Out]) :-
 
 % ----------------------------------------------------------------%
 
-nom(beaumes_de_venise_2015,'Beaumes-de-Venise 2015').
-nom(les_chaboeufs_2013,'Nuits-Saint-Georges 1er Cru 2013, Les Chaboeufs').
-
-prix(beaumes_de_venise_2015, 12.34).
-prix(les_chaboeufs_2013, 42.35).
-
-bouche(beaumes_de_venise_2015, 
-  [ [ 'les aromes de fraise, de violette cotoient les nuances' ],
-    [ 'de baies de genevrier, de sureau et une delicate touche' ],
-    [ 'de fleur d\'oranger. Cette intensite se poursuit en' ],
-    [ 'bouche avec des saveurs juteuses, racees et tres elegantes', '.' ]
-  ]).
-nez(beaumes_de_venise_2015, 
-    [ [ nez, intensement, parfume, '.' ] 
-]).
-description(beaumes_de_venise_2015, 
-    [ [ 'vignoble situe au sud-est des Dentelles de Montmirail', '.' ],
-      [ 'grand vin', '.' ]
-]).
 
 mclef(bouche,10).
 mclef(nez,10).
@@ -115,11 +96,6 @@ mclef(vins,5).
 mclef(bonjour,1).
 mclef(rouge,5).
 
-simil(salut,bonjour).
-rewrite([], []).
-rewrite([Mot|Reste], [New|NewReste]) :-
-    ( simil(Mot, New) ; New = Mot ),
-    rewrite(Reste, NewReste).
 
 
 % ----------------------------------------------------------------%
@@ -389,14 +365,17 @@ grandgousier :-
    nl, nl, nl,
    write('Bonjour, je suis Grandgousier, GGS pour les intimes,'), nl,
    write('conseiller en vin. En quoi puis-je vous etre utile ?'), 
-   nl, nl, 
+   nl, nl,
 
    repeat,
       write('Vous : '),
       lire_question(L_Mots),
-      produire_reponse(L_Mots,L_ligne_reponse),
+      rewrite(L_Mots,NL_Mots),
+      fusionne(NL_Mots,NNL_Mots),
+      write(NNL_Mots),
+      produire_reponse(NNL_Mots,L_ligne_reponse),
       ecrire_reponse(L_ligne_reponse),
-   fin(L_Mots), !.
+   fin(NNL_Mots), !.
    
 
 /* --------------------------------------------------------------------- */

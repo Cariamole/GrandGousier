@@ -14,7 +14,8 @@ regle_rep(vins,2,
       lvins_prix_min_max(X,Y,Lvins),
       rep_lvins_min_max(Lvins,Rep).
    
-   rep_lvins_min_max([], [[ non, '.' ]]).
+
+rep_lvins_min_max([], [[ non, '.' ]]).
 rep_lvins_min_max([H|T], [ [ oui, '.', je, dispose, de ] | L]) :-
    rep_litems_vin_min_max([H|T],L).
 
@@ -34,5 +35,5 @@ lvins_prix_min_max(Min,Max,Lvins) :-
 % ----------------------------------------------------------------%
 
 regle_rep(bonjour,1,[bonjour],Rep):-
-   Rep=[['bonjour','posez','une','question','et','je','serai','ravi','d','essayer','d','y','repondre']].
+   Rep=[['bonjour','posez','une','question','et','je','serai','ravi','d','\'','essayer','d','\'','y','repondre']].
    
