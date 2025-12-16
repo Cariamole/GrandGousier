@@ -73,11 +73,14 @@ sublistrem(SL,[_|T],Lr) :- sublistrem(SL,T,Lr).
 prefixrem([],L,L).
 prefixrem([H|T],[H|L],Lr) :- prefixrem(T,L,Lr).
 
-nom_vins_uniforme(Lmots,L_mots_unif) :-
+nom_vins_uniforme(Lmots,L_mots_unif) :-%MODIFIE PAR NOS SOINS
    L1 = Lmots,
-   replace_vin([beaumes,de,venise,2015],beaumes_de_venise_2015,L1,L2),
-   replace_vin([les,chaboeufs,2013],les_chaboeufs_2013,L2,L3),
-   L_mots_unif = L3.
+   replace_vin([beaumesdevenise2015],v1,L1,L2),
+   replace_vin([les,chaboeufs,2013],v2,L2,L3),
+   replace_vin([chateaumoulindemallet],v3,L3,L4),
+   %replace_vin([],v3,L,L),
+   L_mots_unif = L4.
+
    
 replace_vin(L,X,In,Out) :-
    append(L,Suf,In), !, Out = [X|Suf].
@@ -92,7 +95,6 @@ mclef(bouche,10).
 mclef(nez,10).
 mclef(prix,10).
 mclef(vin,5).
-mclef(vins,5).
 mclef(bonjour,1).
 mclef(rouge,5).
 

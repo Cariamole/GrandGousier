@@ -1,3 +1,5 @@
+:-[vins].
+:- discontiguous regle_rep/4.
 
 regle_rep(bouche,1,
   [ que, donne, le, Vin, en, bouche ],
@@ -6,11 +8,16 @@ regle_rep(bouche,1,
      bouche(Vin,Rep).
 
 % ----------------------------------------------------------------%
+regle_rep(nez,1,
+  [ que, donne, le, Vin, au, nez ],
+  Rep ) :-
 
-regle_rep(vins,2,
-   [ auriezvous, des, vins, entre, X, et, Y, eur ],
+     nez(Vin,Rep).
+% ----------------------------------------------------------------%
+
+regle_rep(vin,1,
+   [ auriezvous, un, vin, entre, X, et, Y, eur ],
    Rep) :-
-      
       lvins_prix_min_max(X,Y,Lvins),
       rep_lvins_min_max(Lvins,Rep).
    

@@ -27,7 +27,22 @@ simil(euros,eur).
 simil(euro,eur).
 simil(e,eur).
 
+simil(les,le).
+simil(des,un).
+simil(vins,vin).
+
 
 %-----------------------------------------------------------
 fusion([auriez,vous],auriezvous).
+
+
+%-----------------------------------------------------------
+fusion([beaumes,de,venise,2015],beaumesdevenise2015).
+fusion([beaumes,de,venise],beaumesdevenise2015).
+fusion([beaumes],beaumesdevenise2015).
+
+fusion([chateau,moulin,de,mallet],chateaumoulindemallet).
+fusion([moulin,de,mallet],chateaumoulindemallet).
+fusion([mallet],chateaumoulindemallet).
+
 
