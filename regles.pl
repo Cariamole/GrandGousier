@@ -4,10 +4,7 @@
 
 % ----------------vin-------------------%
 
-regle_rep(Vin,2,Ques,Rep):-
-   length(Ques,1),
-   fusion(_,Vin),
-   member(Vin,Ques),
+regle_rep([],[Vin],[],Rep):-
    nom(Vin,Nom),
    appellation(Vin,Appel),
    annee(Vin,Annee),
@@ -21,31 +18,46 @@ regle_rep(Vin,2,Ques,Rep):-
 
      bouche(Vin,Rep).*/
 
+/*
 regle_rep(bouche,2,Ques,Rep):-
    length(Ques,2),
    member(bouche,Ques),
    member(Vin,Ques),
    fusion(_,Vin),
    bouche(Vin,Rep).
+*/
+
+
+regle_rep(LCle,[Vin],[],Rep):-
+   member(bouche,LCle),
+   bouche(Vin,Rep).
 
 % ----------------Nez-------------------%
 
+/*
 regle_rep(nez,2,Ques,Rep):-
    length(Ques,2),
    member(nez,Ques),
    member(Vin,Ques),
    fusion(_,Vin),
    nez(Vin,Rep).   
+*/
 
+regle_rep(LCle,[Vin],[],Rep):-
+   member(nez,LCle),
+   nez(Vin,Rep).
 % ----------------Description-------------------%
-
+/*
 regle_rep(description,2,Ques,Rep):-
    length(Ques,2),
    member(description,Ques),
    member(Vin,Ques),
    fusion(_,Vin),
    description(Vin,Rep). 
-
+*/
+regle_rep(LCle,[Vin],[],Rep):-
+   member(description,LCle),
+   description(Vin,Rep).
 % ----------------------------------------------------------------%
 
 regle_rep(vin,1,

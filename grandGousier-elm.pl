@@ -30,7 +30,11 @@
 /*                      !!!    A MODIFIER   !!!                          */
 
 produire_reponse([fin],[],[],[L1]) :-
-   L1 = [merci, de, m, '\'', avoir, consulte], !.    
+   L1 = [merci, de, m, '\'', avoir, consulte], !.
+   
+   
+produire_reponse(LCle,LVin,LNum, Rep) :-
+      regle_rep(LCle, LVin, LNum, Rep), !.
 
 produire_reponse(_,_,_,[L1,L2]) :-
    L1 = [je, ne, sais, pas, '.'],
@@ -44,8 +48,6 @@ produire_reponse(L,Rep) :-
    match_pattern(Pattern,L),
    call(Body),!.
 */
-produire_reponse(LCle,LVin,LNum, Rep) :-
-   regle_rep(M, LVin, LNum, Rep), !.
 
 /*
 produire_reponse(L, Rep) :-
@@ -382,6 +384,7 @@ grandgousier :-
       %lier_finds(NNL_Mots,L_Mcle),
       %write(L_Mcle),nl,
       produire_reponse(LMClef,LVin,LNum,L_ligne_reponse),
+      %regle_rep(LMClef,LVin,LNum,L_ligne_reponse),
       %produire_reponse(L_Mcle,L_ligne_reponse),
       ecrire_reponse(L_ligne_reponse),
    fin(NNL_Mots), !.
