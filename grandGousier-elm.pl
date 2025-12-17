@@ -44,15 +44,14 @@ produire_reponse(L,Rep) :-
    match_pattern(Pattern,L),
    call(Body),!.
 */
-produire_reponse(L, Rep) :-
-   mclef(M, _),
-   member(M, L),
-   regle_rep(M, _, L, Rep), !.
+produire_reponse(LCle,LVin,LNum, Rep) :-
+   regle_rep(M, LVin, LNum, Rep), !.
 
+/*
 produire_reponse(L, Rep) :-
    fusion(_,Vin),
    member(Vin, L),
-   regle_rep(Vin, _, L, Rep), !.
+   regle_rep(Vin, _, L, Rep), !.*/
 
 
 /*
