@@ -5,6 +5,8 @@
 :-discontiguous robe/2.
 :-discontiguous appellation/2.
 :-discontiguous description/2.
+:-discontiguous annee/2.
+
 %que donne le beaumes de venise 2015 en bouche
 
 %nom(2,['Château','La','Fleur','Baudron']).
@@ -26,18 +28,19 @@
 %
 %
 
-nom(v1,'Beaumes-de-Venise 2015').
-prix(v1, 12.34).
-bouche(v1, 
+nom(beaumesdevenise,'Beaumes-de-Venise').
+prix(beaumesdevenise, 12.34).
+bouche(beaumesdevenise, 
   [ [ 'les aromes de fraise, de violette cotoient les nuances' ],
     [ 'de baies de genevrier, de sureau et une delicate touche' ],
     [ 'de fleur d\'oranger. Cette intensite se poursuit en' ],
     [ 'bouche avec des saveurs juteuses, racees et tres elegantes', '.' ]
   ]).
-nez(v1, 
+annee(beaumesdevenise,2015).
+nez(beaumesdevenise, 
     [ [ nez, intensement, parfume, '.' ] 
 ]).
-description(v1, 
+description(beaumesdevenise, 
     [ [ 'vignoble situe au sud-est des Dentelles de Montmirail', '.' ],
       [ 'grand vin', '.' ]
 ]).
@@ -48,12 +51,12 @@ nom(v2,'Nuits-Saint-Georges 1er Cru 2013, Les Chaboeufs').
 prix(v2, 42.35).
 
 %-----------------------------------------------------------------------
-nom(v3,'chateau Moulin de Mallet').
-annee(v3,2014).
-appellation(v3,'Bordeaux').
-prix(v3,5.66).
-robe(v3,[['jolie','robe','grenat','aux','reflets','rubis']]).
-nez(v3,[['nez','tendrement','parfume','de','fruits','rouges']]).
-bouche(v3,[['une robe rouge complete et douce comme un soir d','\'','ete']]).
-description(v3,[['un','joli','vin','classique','polyvalent','avec','un','bel','eventail','aromatique','et','des','tannins','fins']]).
+nom(chateaumoulindemallet,'chateau Moulin de Mallet').
+annee(chateaumoulindemallet,2014).
+appellation(chateaumoulindemallet,'Bordeaux').
+prix(chateaumoulindemallet,5.66).
+robe(chateaumoulindemallet,[['jolie','robe','grenat','aux','reflets','rubis']]).
+nez(chateaumoulindemallet,[['nez','tendrement','parfume','de','fruits','rouges']]).
+bouche(chateaumoulindemallet,[['une touche en bouche complete et douce comme un soir d','\'','ete']]).
+description(chateaumoulindemallet,[['un','joli','vin','classique','polyvalent','avec','un','bel','eventail','aromatique','et','des','tannins','fins']]).
 

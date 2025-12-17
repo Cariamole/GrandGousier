@@ -22,6 +22,7 @@ simil(coucou,bonjour).
 
 simil(aurevoir,fin).
 simil(fini,fin).
+simil(c,fin).
 
 simil(euros,eur).
 simil(euro,eur).
@@ -31,15 +32,18 @@ simil(les,le).
 simil(des,un).
 simil(vins,vin).
 
+simil(decrire,description).
+simil(decrit,description).
+
 
 %-----------------------------------------------------------
 fusion([auriez,vous],auriezvous).
 
 
 %-----------------------------------------------------------
-fusion([beaumes,de,venise,2015],beaumesdevenise2015).
-fusion([beaumes,de,venise],beaumesdevenise2015).
-fusion([beaumes],beaumesdevenise2015).
+fusion([beaumes,de,venise],beaumesdevenise).
+fusion([beaumes,de,venise],beaumesdevenise).
+fusion([beaumes],beaumesdevenise).
 
 fusion([chateau,moulin,de,mallet],chateaumoulindemallet).
 fusion([moulin,de,mallet],chateaumoulindemallet).

@@ -3,6 +3,7 @@
 :-[regles].
 :-[langage].
 :-[vins].
+:-[lecture].
 
 /* --------------------------------------------------------------------- */
 /*                                                                       */
@@ -28,20 +29,33 @@
 
 /*                      !!!    A MODIFIER   !!!                          */
 
-produire_reponse([fin],[L1]) :-
+produire_reponse([fin],[],[],[L1]) :-
    L1 = [merci, de, m, '\'', avoir, consulte], !.    
 
+produire_reponse(_,_,_,[L1,L2]) :-
+   L1 = [je, ne, sais, pas, '.'],
+   L2 = [veuillez,reessayer,dans,d,'\'',autres,termes].
+
+/*
 produire_reponse(L,Rep) :-
    %write(L),
    mclef(M,_), member(M,L),
    clause(regle_rep(M,_,Pattern,Rep),Body),
    match_pattern(Pattern,L),
    call(Body),!.
+*/
+produire_reponse(L, Rep) :-
+   mclef(M, _),
+   member(M, L),
+   regle_rep(M, _, L, Rep), !.
 
-produire_reponse(_,[L1,L2]) :-
-   L1 = [je, ne, sais, pas, '.'],
-   L2 = [veuillez,reessayer,dans,d,'\'',autres,termes].
+produire_reponse(L, Rep) :-
+   fusion(_,Vin),
+   member(Vin, L),
+   regle_rep(Vin, _, L, Rep), !.
 
+
+/*
 match_pattern(Pattern,Lmots) :-
    nom_vins_uniforme(Lmots,L_mots_unif),
    sublist(Pattern,L_mots_unif).
@@ -75,7 +89,7 @@ prefixrem([H|T],[H|L],Lr) :- prefixrem(T,L,Lr).
 
 nom_vins_uniforme(Lmots,L_mots_unif) :-%MODIFIE PAR NOS SOINS
    L1 = Lmots,
-   replace_vin([beaumesdevenise2015],v1,L1,L2),
+   replace_vin([beaumesdevenise],v1,L1,L2),
    replace_vin([les,chaboeufs,2013],v2,L2,L3),
    replace_vin([chateaumoulindemallet],v3,L3,L4),
    %replace_vin([],v3,L,L),
@@ -88,18 +102,7 @@ replace_vin(_,_,[],[]) :- !.
 replace_vin(L,X,[H|In],[H|Out]) :-
    replace_vin(L,X,In,Out).
 
-% ----------------------------------------------------------------%
-
-
-mclef(bouche,10).
-mclef(nez,10).
-mclef(prix,10).
-mclef(vin,5).
-mclef(bonjour,1).
-mclef(rouge,5).
-
-
-
+*/
 % ----------------------------------------------------------------%
 
 
@@ -374,8 +377,13 @@ grandgousier :-
       lire_question(L_Mots),
       rewrite(L_Mots,NL_Mots),
       fusionne(NL_Mots,NNL_Mots),
-      write(NNL_Mots),
-      produire_reponse(NNL_Mots,L_ligne_reponse),
+      find_num(NNL_Mots,LNum),write(LNum),nl,
+      find_mclef(NNL_Mots,LMClef),write(LMClef),nl,
+      find_vin(NNL_Mots,LVin),write(LVin),nl,
+      %lier_finds(NNL_Mots,L_Mcle),
+      %write(L_Mcle),nl,
+      produire_reponse(LMClef,LVin,LNum,L_ligne_reponse),
+      %produire_reponse(L_Mcle,L_ligne_reponse),
       ecrire_reponse(L_ligne_reponse),
    fin(NNL_Mots), !.
    
