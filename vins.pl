@@ -14,13 +14,23 @@ critere(Vin,rouge):-
   couleur(Vin,rouge).
 
 critere(Vin,blanc):-
-  couleur(Vin,rouge).
+  couleur(Vin,blanc).
 
 critere(Vin,bordeaux):-
-  couleur(Vin,bordeaux).
+  write("test"),
+  appellation(Vin,bordeaux).
 
 critere(Vin,pinotnoir):-
-  couleur(Vin,pinotnoir).
+  appellation(Vin,pinotnoir).
+
+critere(Vin,viande):-
+  accord(Vin,viande).
+
+critere(Vin,volaille):-
+  accord(Vin,volaille).
+
+critere(Vin,poisson):-
+  accord(Vin,poisson).
 %que donne le beaumes de venise 2015 en bouche
 
 %nom(2,['Château','La','Fleur','Baudron']).
@@ -60,6 +70,7 @@ description(beaumesdevenise,
       [ 'grand vin', '.' ]
 ]).
 accord(beaumesdevenise,volaille).
+accord(beaumesdevenise,viande).
 couleur(beaumesdevenise,rouge).
 appellation(beaumesdevenise,bordeaux).
 
@@ -68,11 +79,10 @@ appellation(beaumesdevenise,bordeaux).
 
 nom(nuitssaintgeorges,'nuits-Saint-Georges, Les Chaboeufs').
 annnee(nuitssaintgeorges,2013).
-prix(v2, 42.35).
+prix(nuitssaintgeorges, 42.35).
 accord(nuitssaintgeorges,poisson).
 couleur(nuitssaintgeorges,rouge).
 appellation(nuitssaintgeorges,pinotnoir).
-
 %-----------------------------------------------------------------------
 nom(chateaumoulindemallet,'chateau Moulin de Mallet').
 annee(chateaumoulindemallet,2014).
@@ -83,3 +93,4 @@ nez(chateaumoulindemallet,[['nez','tendrement','parfume','de','fruits','rouges']
 bouche(chateaumoulindemallet,[['une touche en bouche complete et douce comme un soir d','\'','ete']]).
 description(chateaumoulindemallet,[['un','joli','vin','classique','polyvalent','avec','un','bel','eventail','aromatique','et','des','tannins','fins']]).
 accord(chateaumoulindemallet,viande).
+couleur(chateaumoulindemallet,rouge).

@@ -56,7 +56,7 @@ find_vin([_|Tail],L):-
     find_vin(Tail,L).
 
 /*=====================================
-        LIER MCLES, VINS ET NOMBRES
+        LIER MCLES, VINS ET NOMBRES (obsolète - n’est plus utilisé)
 =======================================*/
 lier_finds(Lin,Lout):-
     find_mclef(Lin,CleOut),

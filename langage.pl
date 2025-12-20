@@ -39,28 +39,40 @@ simil(vins,vin).
 
 simil(decrire,description).
 simil(decrit,description).
+simil(decris,description).
 
 simil(max,maximum).
 
 simil(poulet,volaille).
 simil(canard,volaille).
+simil(dinde,volaille).
 
 simil(boeuf,viande).
 simil(porc,viande).
 
+simil(rouges,rouge).
+
 %-----------------------------------------------------------
 fusion([auriez,vous],auriezvous).
 fusion([moins,de],maximum).
+fusion([pinot,noir],pinotnoir).
 
 
 
 %-----------------------------------------------------------
 fusion_vin([beaumes,de,venise],beaumesdevenise).
-fusion_vin([beaumes,de,venise],beaumesdevenise).
 fusion_vin([beaumes],beaumesdevenise).
+fusion_vin([beaume],beaumesdevenise).
 
 fusion_vin([chateau,moulin,de,mallet],chateaumoulindemallet).
 fusion_vin([moulin,de,mallet],chateaumoulindemallet).
 fusion_vin([mallet],chateaumoulindemallet).
+
+fusion_vin([nuits,saint,georges],nuitssaintgeorges).
+fusion_vin([nuit,saint,georges],chateaumoulindemallet).
+fusion_vin([saint,georges],chateaumoulindemallet).
+fusion_vin([les,chaboeufs],chateaumoulindemallet).
+fusion_vin([chaboeufs],chateaumoulindemallet).
+
 
 

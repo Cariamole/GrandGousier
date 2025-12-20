@@ -72,7 +72,6 @@ regle_rep(Mots,[],[Max],Rep):-
 
 %entre min et max
 regle_rep(Mots,[],Nombres,Rep):-
-   write("min/max rules"),
    member(eur,Mots),
    list_max(Nombres,Max),
    list_min(Nombres,Min),
@@ -115,9 +114,18 @@ prix_vin_max(Vin,P,Max) :-
    P =< Max.
 
 /*================================================================
+                        Bonjour
+=================================================================*/
+
+regle_rep([bonjour],[],[],Rep):-
+   Rep=[['bonjour','posez','une','question','et','je','serai','ravi','d','\'','essayer','d','\'','y','repondre']].
+
+/*================================================================
                         Criteria
 =================================================================*/
 regle_rep(Mots,[],[],Rep):-
+   length(Mots, N),
+   N>1,   
    trouver_vins(Mots,Vins),
    rep_lvins_crit(Vins,Rep).
 
@@ -127,9 +135,12 @@ trouver_vins(Criteres,Vins):-
 
 criteres(_,[]).
 criteres(Vin, [Critere|Reste]):-
-   critere(Vin,Critere),
+   clause(critere(_,Critere),_)->
+      critere(Vin,Critere),
+      criteres(Vin,Reste)
+      ;
    criteres(Vin,Reste).
-   
+
 rep_lvins_crit([],[[non,'.']]).
 rep_lvins_crit([H|T], [ [ oui, '.', je, dispose, de ] | L]) :-
    rep_litems_crit([H|T],L).
@@ -138,15 +149,9 @@ rep_litems_crit([],[]) :- !.
 rep_litems_crit([V|L], [Irep|Ll]) :-
    nom(V,Appellation),
    prix(V,P),
+   
    Irep = [ '- ', Appellation, '(', P, ' EUR )' ],
-   rep_litems_vin_min_max(L,Ll).
-
-/*================================================================
-                        Bonjour
-=================================================================*/
-
-regle_rep([bonjour],[],[],Rep):-
-   Rep=[['bonjour','posez','une','question','et','je','serai','ravi','d','\'','essayer','d','\'','y','repondre']].
+   rep_litems_crit(L,Ll).
 
 
 /*================================================================
