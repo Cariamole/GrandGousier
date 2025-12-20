@@ -69,10 +69,10 @@ fusion_vin([moulin,de,mallet],chateaumoulindemallet).
 fusion_vin([mallet],chateaumoulindemallet).
 
 fusion_vin([nuits,saint,georges],nuitssaintgeorges).
-fusion_vin([nuit,saint,georges],chateaumoulindemallet).
-fusion_vin([saint,georges],chateaumoulindemallet).
-fusion_vin([les,chaboeufs],chateaumoulindemallet).
-fusion_vin([chaboeufs],chateaumoulindemallet).
+fusion_vin([nuit,saint,georges],nuitssaintgeorges).
+fusion_vin([saint,georges],nuitssaintgeorges).
+fusion_vin([les,chaboeufs],nuitssaintgeorges).
+fusion_vin([chaboeufs],nuitssaintgeorges).
 
 
 

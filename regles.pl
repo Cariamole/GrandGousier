@@ -5,9 +5,9 @@
 % ----------------vin-------------------%
 
 regle_rep([],[Vin],[],Rep):-
-   write(Vin),nl,
    nom(Vin,Nom),
    appellation(Vin,Appel),
+   write(Vin),nl,
    annee(Vin,Annee),
    prix(Vin,Prix),
    write("test"),nl,
@@ -48,7 +48,18 @@ regle_rep(nez,2,Ques,Rep):-
 regle_rep(LCle,[Vin],[],Rep):-
    member(nez,LCle),
    nez(Vin,Rep).
-
+% ----------------robe-------------------%
+/*
+regle_rep(description,2,Ques,Rep):-
+   length(Ques,2),
+   member(description,Ques),
+   member(Vin,Ques),
+   fusion(_,Vin),
+   description(Vin,Rep). 
+*/
+regle_rep(LCle,[Vin],[],Rep):-
+   member(robe,LCle),
+   description(Vin,Rep).
 % ----------------Description-------------------%
 /*
 regle_rep(description,2,Ques,Rep):-

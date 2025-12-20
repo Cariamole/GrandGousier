@@ -78,7 +78,7 @@ appellation(beaumesdevenise,bordeaux).
 %-----------------------------------------------------------------------
 
 nom(nuitssaintgeorges,'nuits-Saint-Georges, Les Chaboeufs').
-annnee(nuitssaintgeorges,2013).
+annee(nuitssaintgeorges,2013).
 prix(nuitssaintgeorges, 42.35).
 accord(nuitssaintgeorges,poisson).
 couleur(nuitssaintgeorges,rouge).
