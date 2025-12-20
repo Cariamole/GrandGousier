@@ -6,7 +6,21 @@
 :-discontiguous appellation/2.
 :-discontiguous description/2.
 :-discontiguous annee/2.
+:-discontiguous accord/2.
+:-discontiguous couleur/2.
 
+
+critere(Vin,rouge):-
+  couleur(Vin,rouge).
+
+critere(Vin,blanc):-
+  couleur(Vin,rouge).
+
+critere(Vin,bordeaux):-
+  couleur(Vin,bordeaux).
+
+critere(Vin,pinotnoir):-
+  couleur(Vin,pinotnoir).
 %que donne le beaumes de venise 2015 en bouche
 
 %nom(2,['Château','La','Fleur','Baudron']).
@@ -26,9 +40,10 @@
 %robe(3,['vin','veloute']).
 %description(3,['On','garde','le','souvenir','d','un','vin','veloute','et','harmonieux.']).
 %
-%
 
-nom(beaumesdevenise,'Beaumes-de-Venise').
+
+
+nom(beaumesdevenise,'beaumes-de-Venise').
 prix(beaumesdevenise, 12.34).
 bouche(beaumesdevenise, 
   [ [ 'les aromes de fraise, de violette cotoient les nuances' ],
@@ -44,19 +59,27 @@ description(beaumesdevenise,
     [ [ 'vignoble situe au sud-est des Dentelles de Montmirail', '.' ],
       [ 'grand vin', '.' ]
 ]).
+accord(beaumesdevenise,volaille).
+couleur(beaumesdevenise,rouge).
+appellation(beaumesdevenise,bordeaux).
+
 
 %-----------------------------------------------------------------------
 
-nom(v2,'Nuits-Saint-Georges 1er Cru 2013, Les Chaboeufs').
+nom(nuitssaintgeorges,'nuits-Saint-Georges, Les Chaboeufs').
+annnee(nuitssaintgeorges,2013).
 prix(v2, 42.35).
+accord(nuitssaintgeorges,poisson).
+couleur(nuitssaintgeorges,rouge).
+appellation(nuitssaintgeorges,pinotnoir).
 
 %-----------------------------------------------------------------------
 nom(chateaumoulindemallet,'chateau Moulin de Mallet').
 annee(chateaumoulindemallet,2014).
-appellation(chateaumoulindemallet,'Bordeaux').
+appellation(chateaumoulindemallet,bordeaux).
 prix(chateaumoulindemallet,5.66).
 robe(chateaumoulindemallet,[['jolie','robe','grenat','aux','reflets','rubis']]).
 nez(chateaumoulindemallet,[['nez','tendrement','parfume','de','fruits','rouges']]).
 bouche(chateaumoulindemallet,[['une touche en bouche complete et douce comme un soir d','\'','ete']]).
 description(chateaumoulindemallet,[['un','joli','vin','classique','polyvalent','avec','un','bel','eventail','aromatique','et','des','tannins','fins']]).
-
+accord(chateaumoulindemallet,viande).

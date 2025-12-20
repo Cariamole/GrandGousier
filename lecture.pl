@@ -12,6 +12,14 @@ mclef(rouge,5).
 mclef(appelation,5).
 mclef(eur,5).
 mclef(description,5).
+mclef(maximum,5).
+mclef(viande,5).
+mclef(volaille,5).
+mclef(poisson,5).
+mclef(bordeaux,5).
+mclef(pinotnoir,5).
+mclef(rouge,5).
+mclef(blanc,5).
 
 
 
@@ -42,7 +50,7 @@ find_mclef([_|Tail],L):-
 =======================================*/
 find_vin([],[]).
 find_vin([Head|Tail],[Head|T]):-
-    fusion(_,Head),!,
+    fusion_vin(_,Head),!,
     find_vin(Tail,T).
 find_vin([_|Tail],L):-
     find_vin(Tail,L).
