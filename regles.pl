@@ -10,7 +10,7 @@ regle_rep([],[Vin],[],Rep):-
    write(Vin),nl,
    annee(Vin,Annee),
    prix(Vin,Prix),
-   write("test"),nl,
+   write("regle:vin"),nl,
    Rep = [[ Nom,Annee,'est un vin de', Appel, '(', Prix, ' EUR )' ]].
 
 %--------------Bouche---------------
@@ -59,7 +59,7 @@ regle_rep(description,2,Ques,Rep):-
 */
 regle_rep(LCle,[Vin],[],Rep):-
    member(robe,LCle),
-   description(Vin,Rep).
+   robe(Vin,Rep).
 % ----------------Description-------------------%
 /*
 regle_rep(description,2,Ques,Rep):-

@@ -12,6 +12,7 @@ fusionne(L,[Mot|Reste]):-
     append(Pattern,ResteB,L),!,
     fusionne(ResteB,Reste).
 
+
 fusionne(L,[Mot|Reste]):-
     fusion_vin(Pattern,Mot),
     prefix(Pattern, L),
@@ -53,8 +54,12 @@ simil(porc,viande).
 simil(rouges,rouge).
 
 %-----------------------------------------------------------
+fusion([toto, va, bien], maximum).
 fusion([auriez,vous],auriezvous).
 fusion([moins,de],maximum).
+fusion([au,plus],maximum).
+fusion([plus,de],minimum).
+fusion([au,moins],minimum).
 fusion([pinot,noir],pinotnoir).
 
 

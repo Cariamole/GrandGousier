@@ -376,8 +376,13 @@ grandgousier :-
    repeat,
       write('Vous : '),
       lire_question(L_Mots),
-      rewrite(L_Mots,NL_Mots),
-      fusionne(NL_Mots,NNL_Mots),
+      %lire_question("Toto,va, bien"),
+      %rewrite(L_Mots,NL_Mots),
+      %fusionne(NL_Mots,NNL_Mots),
+      fusionne(L_Mots,NL_Mots),
+      rewrite(NL_Mots,NNL_Mots),
+      
+      
       find_mclef(NNL_Mots,LMClef),write(LMClef),nl,
       find_vin(NNL_Mots,LVin),write(LVin),nl,
       find_num(NNL_Mots,LNum),write(LNum),nl,
