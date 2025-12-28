@@ -43,6 +43,7 @@ simil(decrit,description).
 simil(decris,description).
 
 simil(max,maximum).
+simil(min,minimum).
 
 simil(poulet,volaille).
 simil(canard,volaille).
@@ -51,9 +52,24 @@ simil(dinde,volaille).
 simil(boeuf,viande).
 simil(porc,viande).
 
-simil(rouges,rouge).
+simil(gibiers,gibier).
 
-%-----------------------------------------------------------
+simil(crustace,poisson).
+simil(crustaces,poisson).
+simil(poissons,poisson).
+
+simil(rouges,rouge).
+simil(blancs,blanc).
+simil(roses,rose).
+simil(champgagnes,champagne).
+simil(cognacs,cognac).
+simil(bordeau,bordeaux).
+simil(bordelais,bordeaux).
+
+simil(exceptionnel, exception).
+simil(exceptionnels, exception).
+
+%---------- fusion : normalisation de mots du langage ----------
 fusion([toto, va, bien], maximum).
 fusion([auriez,vous],auriezvous).
 fusion([moins,de],maximum).
@@ -65,7 +81,7 @@ fusion([pinot,noir],pinotnoir).
 
 
 
-%-----------------------------------------------------------
+%---------- fusion_vin : normalisation de noms de vins ----------
 fusion_vin([beaumes,de,venise],beaumesdevenise).
 fusion_vin([beaumes],beaumesdevenise).
 fusion_vin([beaume],beaumesdevenise).
@@ -82,3 +98,22 @@ fusion_vin([chaboeufs],nuitssaintgeorges).
 
 
 
+%---------- Bordeaux ----------
+fusion_vin([fleur,baudron],ch_la_fleur_baudron).
+fusion_vin([fleur,de,baudron],ch_la_fleur_baudron).
+fusion_vin([baudron],ch_la_fleur_baudron).
+
+fusion_vin([bois,vert],ch_bois_vert).
+
+fusion_vin([paret], ch_paret).
+
+fusion_vin([menota], ch_menota).
+
+fusion_vin([polyanthas], ch_les_polyanthas).
+
+fusion_vin([menotte], ch_la_menotte).
+
+fusion_vin([fleur,de,pomys], la_fleur_de_pomys).
+fusion_vin([pomys], la_fleur_de_pomys).
+
+fusion_vin([florilege,pauillac], florilege_pauillac).

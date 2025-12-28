@@ -88,9 +88,11 @@ nom(chateaumoulindemallet,'chateau Moulin de Mallet').
 annee(chateaumoulindemallet,2014).
 appellation(chateaumoulindemallet,bordeaux).
 prix(chateaumoulindemallet,5.66).
-robe(chateaumoulindemallet,[['jolie','robe','grenat','aux','reflets','rubis']]).
+robe(chateaumoulindemallet,[['jolie robe grenat aux reflets rubis']]).
 nez(chateaumoulindemallet,[['nez','tendrement','parfume','de','fruits','rouges']]).
 bouche(chateaumoulindemallet,[['une touche en bouche complete et douce comme un soir d','\'','ete']]).
 description(chateaumoulindemallet,[['un','joli','vin','classique','polyvalent','avec','un','bel','eventail','aromatique','et','des','tannins','fins']]).
 accord(chateaumoulindemallet,viande).
 couleur(chateaumoulindemallet,rouge).
+
+
