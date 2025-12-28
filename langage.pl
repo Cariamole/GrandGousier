@@ -60,6 +60,7 @@ fusion([moins,de],maximum).
 fusion([au,plus],maximum).
 fusion([plus,de],minimum).
 fusion([au,moins],minimum).
+fusion([a,partir,de],minimum).
 fusion([pinot,noir],pinotnoir).
 
 

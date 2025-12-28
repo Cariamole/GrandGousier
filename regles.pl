@@ -80,6 +80,12 @@ regle_rep(Mots,[],[Max],Rep):-
    lvins_prix_max(Max,Lvins),
    rep_lvins_min_max(Lvins,Rep).
 
+%Min X eur
+regle_rep(Mots,[],[Min],Rep):-
+   member(eur,Mots),
+   member(minimum,Mots),
+   lvins_prix_min(Min,Lvins),
+   rep_lvins_min_max(Lvins,Rep).
 
 %entre min et max
 regle_rep(Mots,[],Nombres,Rep):-
@@ -123,6 +129,12 @@ lvins_prix_max(Max,Lvins) :-
 prix_vin_max(Vin,P,Max) :-
    prix(Vin,P),
    P =< Max.
+
+lvins_prix_min(Min,Lvins) :-
+   findall( (Vin,P), prix_vin_min(Vin,P,Min), Lvins).
+prix_vin_min(Vin,P,Min) :-
+   prix(Vin,P),
+   P >= Min.
 
 /*================================================================
                         Bonjour
