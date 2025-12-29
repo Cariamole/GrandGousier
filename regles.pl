@@ -6,12 +6,13 @@
 
 regle_rep([],[Vin],[],Rep):-
    nom(Vin,Nom),
-   appellation(Vin,Appel),
+   region(Vin,Region),
+   appellation(Vin, Appellation),
    write(Vin),nl,
    annee(Vin,Annee),
    prix(Vin,Prix),
-   write("regle:vin"),nl,
-   Rep = [[ Nom,Annee,'est un vin de', Appel, '(', Prix, ' EUR )' ]].
+   %write("regle:vin"),nl,
+   Rep = [[ Nom,Annee,'est un vin de', Region, ':', Appellation, '(', Prix, ' EUR )' ]].
 
 %--------------Bouche---------------
 /*regle_rep(bouche,1,
@@ -113,8 +114,8 @@ rep_lvins_min_max([H|T], [ [ oui, '.', je, dispose, de ] | L]) :-
 
 rep_litems_vin_min_max([],[]) :- !.
 rep_litems_vin_min_max([(V,P)|L], [Irep|Ll]) :-
-   nom(V,Appellation),
-   Irep = [ '- ', Appellation, '(', P, ' EUR )' ],
+   nom(V,Region),
+   Irep = [ '- ', Region, '(', P, ' EUR )' ],
    rep_litems_vin_min_max(L,Ll).
 
 prix_vin_min_max(Vin,P,Min,Max) :-
@@ -170,10 +171,10 @@ rep_lvins_crit([H|T], [ [ oui, '.', je, dispose, de ] | L]) :-
 
 rep_litems_crit([],[]) :- !.
 rep_litems_crit([V|L], [Irep|Ll]) :-
-   nom(V,Appellation),
+   nom(V,Region),
    prix(V,P),
    
-   Irep = [ '- ', Appellation, '(', P, ' EUR )' ],
+   Irep = [ '- ', Region, '(', P, ' EUR )' ],
    rep_litems_crit(L,Ll).
 
 
