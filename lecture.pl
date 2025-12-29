@@ -6,6 +6,8 @@ mclef(fin,100).
 mclef(bouche,5).
 mclef(nez,5).
 mclef(robe,5).
+mclef(region,5).
+mclef(terroir,5).
 mclef(prix,5).
 mclef(vin,5).
 mclef(bonjour,5).

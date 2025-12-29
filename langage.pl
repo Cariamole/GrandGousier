@@ -70,16 +70,18 @@ simil(exceptionnel, exception).
 simil(exceptionnels, exception).
 
 %---------- fusion : normalisation de mots du langage ----------
-fusion([toto, va, bien], maximum).
 fusion([auriez,vous],auriezvous).
+fusion([dire,plus],description). % Peux-tu m'en dire plus....
 fusion([moins,de],maximum).
 fusion([au,plus],maximum).
 fusion([plus,de],minimum).
 fusion([au,moins],minimum).
 fusion([a,partir,de],minimum).
 fusion([pinot,noir],pinotnoir).
-
-
+fusion([cote,rhone],rhone).
+fusion([cotes,rhone],rhone).
+fusion([vallee,du,rhone],rhone).
+fusion([languedoc],rhone).
 
 %---------- fusion_vin : normalisation de noms de vins ----------
 fusion_vin([beaumes,de,venise],beaumesdevenise).
