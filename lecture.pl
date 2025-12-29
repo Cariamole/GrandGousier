@@ -33,6 +33,7 @@ mclef(pinotnoir,5).
 mclef(rouge,5).
 mclef(blanc,5).
 mclef(rose,5).
+mclef(ambre,5).
 
 
 /*=====================================
