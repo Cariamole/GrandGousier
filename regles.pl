@@ -198,13 +198,14 @@ rep_litems_crit([V|L], [Irep|Ll]) :-
 =================================================================*/
 
 /* ========== Recherche selon le millesime ========== */
+/*% Obsolète 
 find_avant(Vin,AnneeR,AnneeDemande):-
    annee(Vin,AnneeR),
    AnneeR<AnneeDemande.
 
 lvins_Avant(Vin,Annee,Lvins):-
    findall((Vin,AnneeR),find_avant(Vin,AnneeR,Annee),Lvins).
-
+*/
 /* ========== Recherche du min et du max dans une liste de nombres ==========*/
 
 list_max([P|T], O) :- list_max(T, P, O).
