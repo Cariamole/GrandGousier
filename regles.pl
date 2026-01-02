@@ -8,7 +8,7 @@ regle_rep([],[Vin],[],Rep):-
    nom(Vin,Nom),
    region(Vin,Region),
    appellation(Vin, Appellation),
-   write(Vin),nl,
+   %write(Vin),nl,
    annee(Vin,Annee),
    prix(Vin,Prix),
    %write("regle:vin"),nl,
@@ -114,8 +114,8 @@ rep_lvins_min_max([H|T], [ [ oui, '.', je, dispose, de ] | L]) :-
 
 rep_litems_vin_min_max([],[]) :- !.
 rep_litems_vin_min_max([(V,P)|L], [Irep|Ll]) :-
-   nom(V,Region),
-   Irep = [ '- ', Region, '(', P, ' EUR )' ],
+   nom(V,Nom),
+   Irep = [ '- ', Nom, '(', P, ' EUR )' ],
    rep_litems_vin_min_max(L,Ll).
 
 prix_vin_min_max(Vin,P,Min,Max) :-
@@ -127,12 +127,14 @@ lvins_prix_min_max(Min,Max,Lvins) :-
 
 lvins_prix_max(Max,Lvins) :-
    findall( (Vin,P) , prix_vin_max(Vin,P,Max), Lvins ).
+
 prix_vin_max(Vin,P,Max) :-
    prix(Vin,P),
    P =< Max.
 
 lvins_prix_min(Min,Lvins) :-
    findall( (Vin,P), prix_vin_min(Vin,P,Min), Lvins).
+
 prix_vin_min(Vin,P,Min) :-
    prix(Vin,P),
    P >= Min.
@@ -182,12 +184,15 @@ rep_litems_crit([V|L], [Irep|Ll]) :-
                         PRÉDICATS DIVERS
 =================================================================*/
 
+/* ========== Recherche selon le millesime ========== */
 find_avant(Vin,AnneeR,AnneeDemande):-
    annee(Vin,AnneeR),
    AnneeR<AnneeDemande.
 
 lvins_Avant(Vin,Annee,Lvins):-
    findall((Vin,AnneeR),find_avant(Vin,AnneeR,Annee),Lvins).
+
+/* ========== Recherche du min et du max dans une liste de nombres ==========*/
 
 list_max([P|T], O) :- list_max(T, P, O).
 

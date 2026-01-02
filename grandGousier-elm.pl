@@ -376,7 +376,6 @@ grandgousier :-
    repeat,
       write('Vous : '),
       lire_question(L_Mots),
-      %lire_question("Toto,va, bien"),
       %rewrite(L_Mots,NL_Mots),
       %fusionne(NL_Mots,NNL_Mots),
       fusionne(L_Mots,NL_Mots),
