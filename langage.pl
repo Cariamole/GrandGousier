@@ -45,6 +45,10 @@ simil(decris,description).
 simil(max,maximum).
 simil(min,minimum).
 
+simil(annee,millesime).
+simil(annees,millesime).
+simil(millesimes,millesime).
+
 simil(poulet,volaille).
 simil(canard,volaille).
 simil(dinde,volaille).

@@ -149,6 +149,19 @@ regle_rep([bonjour],[],[],Rep):-
 /*================================================================
                         Criteria
 =================================================================*/
+% Recherche de vin par millesime
+regle_rep(Mots,[],Annees,Rep):-
+   Mots \= [],
+   Annees \= [],
+   member(millesime,Mots),
+   min_list(Annees,Min),
+   max_list(Annees,Max),
+   Min >= 1950,
+   Max =<2025,
+   findall(Vin,(annee(Vin,Annee),number(Annee), Annee >= Min, Annee =< Max),Vins),
+   rep_lvins_crit(Vins,Rep).
+
+
 regle_rep(Mots,[],[],Rep):-
    length(Mots, N),
    N>1,   
