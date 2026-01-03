@@ -88,46 +88,9 @@ fusion([cote,rhone],rhone).
 fusion([cotes,rhone],rhone).
 fusion([vallee,du,rhone],rhone).
 fusion([languedoc],rhone).
-/*
-%---------- fusion_vin : normalisation de noms de vins ----------
-fusion_vin([beaumes,de,venise],beaumesdevenise).
-fusion_vin([beaumes],beaumesdevenise).
-fusion_vin([beaume],beaumesdevenise).
-
-fusion_vin([chateau,moulin,de,mallet],chateaumoulindemallet).
-fusion_vin([moulin,de,mallet],chateaumoulindemallet).
-fusion_vin([mallet],chateaumoulindemallet).
-
-fusion_vin([nuits,saint,georges],nuitssaintgeorges).
-fusion_vin([nuit,saint,georges],nuitssaintgeorges).
-fusion_vin([saint,georges],nuitssaintgeorges).
-fusion_vin([les,chaboeufs],nuitssaintgeorges).
-fusion_vin([chaboeufs],nuitssaintgeorges).
 
 
-
-%---------- Bordeaux ----------
-fusion_vin([fleur,baudron],ch_la_fleur_baudron).
-fusion_vin([fleur,de,baudron],ch_la_fleur_baudron).
-fusion_vin([baudron],ch_la_fleur_baudron).
-
-fusion_vin([bois,vert],ch_bois_vert).
-
-fusion_vin([paret], ch_paret).
-
-fusion_vin([menota], ch_menota).
-
-fusion_vin([polyanthas], ch_les_polyanthas).
-
-fusion_vin([menotte], ch_la_menotte).
-
-fusion_vin([fleur,de,pomys], la_fleur_de_pomys).
-fusion_vin([pomys], la_fleur_de_pomys).
-
-fusion_vin([florilege,pauillac], florilege_pauillac).
-*/
-
-% ---------------------------------------- Normalisation ChatGPT ----------------------------------------
+% ---------------------------------------- Normalisation des noms de vin (Gemini) ----------------------------------------
 % ------------------------------ Bordeaux -------------------------
 
 % Ch. Moulin de Mallet

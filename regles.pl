@@ -8,28 +8,11 @@ regle_rep([],[Vin],[],Rep):-
    nom(Vin,Nom),
    region(Vin,Region),
    appellation(Vin, Appellation),
-   %write(Vin),nl,
    annee(Vin,Annee),
    prix(Vin,Prix),
-   %write("regle:vin"),nl,
    Rep = [[ Nom,Annee,'est un vin de', Region, ':', Appellation, '(', Prix, ' EUR )' ]].
 
 %--------------Bouche---------------
-/*regle_rep(bouche,1,
-  [ que, donne, le, Vin, en, bouche ],
-  Rep ) :-
-
-     bouche(Vin,Rep).*/
-
-/*
-regle_rep(bouche,2,Ques,Rep):-
-   length(Ques,2),
-   member(bouche,Ques),
-   member(Vin,Ques),
-   fusion(_,Vin),
-   bouche(Vin,Rep).
-*/
-
 
 regle_rep(LCle,[Vin],[],Rep):-
    member(bouche,LCle),
@@ -37,39 +20,16 @@ regle_rep(LCle,[Vin],[],Rep):-
 
 % ----------------Nez-------------------%
 
-/*
-regle_rep(nez,2,Ques,Rep):-
-   length(Ques,2),
-   member(nez,Ques),
-   member(Vin,Ques),
-   fusion(_,Vin),
-   nez(Vin,Rep).   
-*/
-
 regle_rep(LCle,[Vin],[],Rep):-
    member(nez,LCle),
    nez(Vin,Rep).
 % ----------------robe-------------------%
-/*
-regle_rep(description,2,Ques,Rep):-
-   length(Ques,2),
-   member(description,Ques),
-   member(Vin,Ques),
-   fusion(_,Vin),
-   description(Vin,Rep). 
-*/
+
 regle_rep(LCle,[Vin],[],Rep):-
    member(robe,LCle),
    robe(Vin,Rep).
 % ----------------Description-------------------%
-/*
-regle_rep(description,2,Ques,Rep):-
-   length(Ques,2),
-   member(description,Ques),
-   member(Vin,Ques),
-   fusion(_,Vin),
-   description(Vin,Rep). 
-*/
+
 regle_rep(LCle,[Vin],[],Rep):-
    member(description,LCle),
    description(Vin,Rep).
@@ -96,16 +56,6 @@ regle_rep(Mots,[],Nombres,Rep):-
    Max > Min,
    lvins_prix_min_max(Min,Max,Lvins),
    rep_lvins_min_max(Lvins,Rep).
-
-
-
-/*
-regle_rep(vin,1,
-   [ auriezvous, un, vin, entre, X, et, Y, eur ],
-   Rep) :-
-      lvins_prix_min_max(X,Y,Lvins),
-      rep_lvins_min_max(Lvins,Rep).
-   */
   
   
 rep_lvins_min_max([], [[ non, '.' ]]).
@@ -197,15 +147,6 @@ rep_litems_crit([V|L], [Irep|Ll]) :-
                         PRÉDICATS DIVERS
 =================================================================*/
 
-/* ========== Recherche selon le millesime ========== */
-/*% Obsolète 
-find_avant(Vin,AnneeR,AnneeDemande):-
-   annee(Vin,AnneeR),
-   AnneeR<AnneeDemande.
-
-lvins_Avant(Vin,Annee,Lvins):-
-   findall((Vin,AnneeR),find_avant(Vin,AnneeR,Annee),Lvins).
-*/
 /* ========== Recherche du min et du max dans une liste de nombres ==========*/
 
 list_max([P|T], O) :- list_max(T, P, O).
