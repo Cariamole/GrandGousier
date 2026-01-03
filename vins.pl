@@ -636,7 +636,7 @@ accord(coteaux_bourguignons, viande).
 % Bourgogne Pinot Noir
 nom(bourgogne_pinot_noir, 'bourgogne pinot noir').
 region(bourgogne_pinot_noir, 'bourgogne').
-appellation(bourgogne_pinot_noir, 'bourgogne').
+appellation(bourgogne_pinot_noir, 'pinotnoir').
 couleur(bourgogne_pinot_noir, 'rouge').
 annee(bourgogne_pinot_noir, 2014).
 prix(bourgogne_pinot_noir, 11.45).

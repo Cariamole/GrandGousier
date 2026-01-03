@@ -33,6 +33,16 @@ regle_rep(LCle,[Vin],[],Rep):-
 regle_rep(LCle,[Vin],[],Rep):-
    member(description,LCle),
    description(Vin,Rep).
+
+% ---------------- Accord des mets --------------- %
+
+regle_rep(LCle,[Vin],[],[Rep]):-
+   member(accord,LCle),
+   nom(Vin,Nom),
+   findall(Accord,accord(Vin,Accord),Accords),
+   Irep = [Nom,'s\'accorde','bien','avec','les','mets','suivants',':'],
+   append(Irep,Accords,Rep).
+
 % ----------------------min/max budget-------------------------------%
 %Max X eur
 regle_rep(Mots,[],[Max],Rep):-
@@ -57,7 +67,7 @@ regle_rep(Mots,[],Nombres,Rep):-
    lvins_prix_min_max(Min,Max,Lvins),
    rep_lvins_min_max(Lvins,Rep).
   
-  
+
 rep_lvins_min_max([], [[ non, '.' ]]).
 rep_lvins_min_max([H|T], [ [ oui, '.', je, dispose, de ] | L]) :-
    rep_litems_vin_min_max([H|T],L).
@@ -107,11 +117,11 @@ regle_rep(Mots,[],Annees,Rep):-
    min_list(Annees,Min),
    max_list(Annees,Max),
    Min >= 1950,
-   Max =<2025,
+   Max =<2030,
    findall(Vin,(annee(Vin,Annee),number(Annee), Annee >= Min, Annee =< Max),Vins),
    rep_lvins_crit(Vins,Rep).
 
-
+% Recherche de vins par critères (mots-clés)
 regle_rep(Mots,[],[],Rep):-
    length(Mots, N),
    N>1,   

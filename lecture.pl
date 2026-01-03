@@ -22,6 +22,8 @@ mclef(minimum,5).
 
 mclef(millesime,5).
 
+mclef(accord,5).
+
 mclef(viande,5).
 mclef(volaille,5).
 mclef(poisson,5).

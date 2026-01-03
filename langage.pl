@@ -50,6 +50,12 @@ simil(annee,millesime).
 simil(annees,millesime).
 simil(millesimes,millesime).
 
+simil(mets,accord).
+simil(plat,accord).
+simil(accompagnent,accord).
+simil(repas,accord).
+simil(manger,accord).
+
 simil(poulet,volaille).
 simil(canard,volaille).
 simil(dinde,volaille).
@@ -96,10 +102,12 @@ fusion([languedoc],rhone).
 % Ch. Moulin de Mallet
 fusion_vin(['moulin', 'de', 'mallet'], ch_moulin_de_mallet).
 fusion_vin(['moulin', 'mallet'], ch_moulin_de_mallet).
+fusion_vin(['mallet'], ch_moulin_de_mallet).
 
 % Ch. La Fleur Baudron
 fusion_vin(['la', 'fleur', 'baudron'], ch_la_fleur_baudron).
 fusion_vin(['fleur', 'baudron'], ch_la_fleur_baudron).
+fusion_vin(['baudron'], ch_la_fleur_baudron).
 
 % Ch. Bois Vert Cuvée Elégance
 fusion_vin(['bois', 'vert', 'cuvee', 'elegance'], ch_bois_vert_cuvee_elegance).
