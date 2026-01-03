@@ -180,6 +180,7 @@ description(ch_moulin_de_mallet, [
     ['avec', 'un', 'bel', 'equilibre', 'de', 'l\'', 'ensemble', ','],
     ['et', 'un', 'boise', 'bien', 'integre', '.', '(', '2017', '-', '2020', ')']
 ]).
+accord(ch_moulin_de_mallet, viande).
 
 % Ch. La Fleur Baudron
 nom(ch_la_fleur_baudron, 'ch. la fleur baudron').
@@ -204,6 +205,8 @@ bouche(ch_la_fleur_baudron, [
 description(ch_la_fleur_baudron, [
     ['un', 'bordeaux', 'tres', 'complet', '(', '2017', '-', '2021', ')']
 ]).
+accord(ch_la_fleur_baudron, viande).
+accord(ch_la_fleur_baudron, volaille).
 
 % Ch. Bois Vert Cuvée Elégance
 nom(ch_bois_vert_cuvee_elegance, 'ch. bois vert cuvee elegance').
@@ -230,6 +233,7 @@ description(ch_bois_vert_cuvee_elegance, [
     ['on', 'garde', 'le', 'souvenir', 'd\'', 'un', 'vin', 'veloute'],
     ['et', 'harmonieux', '(', '2017', '-', '2021', ')']
 ]).
+accord(ch_bois_vert_cuvee_elegance, viande).
 
 % Ch. Paret
 nom(ch_paret, 'ch. paret').
@@ -255,6 +259,7 @@ description(ch_paret, [
     ['beau', 'caractere', ',', 'et', 'laisse', 'le', 'souvenir'],
     ['d\'', 'un', 'vin', 'tres', 'complet', '(', '2017', '-', '2020', ')']
 ]).
+accord(ch_paret, viande).
 
 % Ch. Ménota Cuvée Montgarède
 nom(ch_menota_cuvee_montgarede, 'ch. menota cuvee montgarede').
@@ -279,6 +284,7 @@ bouche(ch_menota_cuvee_montgarede, [
 description(ch_menota_cuvee_montgarede, [
     ['delicieux', 'graves', ',', 'plein', 'd\'', 'etoffe', '!', '(', '2017', '-', '2023', ')']
 ]).
+accord(ch_menota_cuvee_montgarede, viande).
 
 % Ch. Les Polyanthas
 nom(ch_les_polyanthas, 'ch. les polyanthas').
@@ -302,6 +308,7 @@ description(ch_les_polyanthas, [
     ['saint-emilion', 'de', 'grande', 'classe', ',', 'opulent', '.'],
     ['(', '2017', '-', '2020', ')']
 ]).
+accord(ch_les_polyanthas, viande).
 
 % Ch. La Menotte
 nom(ch_la_menotte, 'ch. la menotte').
@@ -327,6 +334,7 @@ description(ch_la_menotte, [
     ['magnifique', 'temoin', 'de', 'l\'', 'appellation', '.'],
     ['(', '2017', '-', '2023', ')']
 ]).
+accord(ch_la_menotte, viande).
 
 % La Fleur de Pomys
 nom(la_fleur_de_pomys, 'la fleur de pomys').
@@ -351,6 +359,8 @@ description(la_fleur_de_pomys, [
     ['saint-estephe', 'complet', ',', 'dense', 'et', 'race', '.'],
     ['(', '2017', '-', '2024', ')']
 ]).
+accord(la_fleur_de_pomys, viande).
+accord(la_fleur_de_pomys, gibier).
 
 % Florilege Pauillac
 nom(florilege_pauillac, 'florilege pauillac').
@@ -375,6 +385,8 @@ description(florilege_pauillac, [
     ['remarquable', 'distinction', '.', 'ideal', 'pour', 'le'],
     ['gibier', '.', '(', '2017', '-', '2024', ')']
 ]).
+accord(florilege_pauillac,gibier).
+accord(florilege_pauillac, viande)
 
 % Florilege Saint-Julien
 nom(florilege_saint_julien, 'Florilege Saint-Julien').
@@ -399,6 +411,8 @@ description(florilege_saint_julien, [
     ['un', 'vin', 'noble', ',', 'equilibre', 'et', 'race', '.'],
     ['(', '2017', '-', '2024', ')']
 ]).
+accord(florilege_saint_julien, viande).
+accord(florilege_saint_julien, gibier).
 
 % Florilege Pomerol
 nom(florilege_pomerol, 'Florilege Pomerol').
@@ -422,6 +436,8 @@ description(florilege_pomerol, [
     ['un', 'vin', 'onctueux', 'et', 'raffine', ',', 'fidele'],
     ['a', 'son', 'appellation', '.', '(', '2017', '-', '2023', ')']
 ]).
+accord(florilege_pomerol, viande).
+accord(florilege_pomerol, volaille).
 
 % ------------------------------ Cotes du Rhone et du Languedoc -----
 % Syrah-Vin de Pays d'Oc
@@ -446,6 +462,7 @@ description(syrah_vin_de_pays_d_oc, [
     ['tannins', 'fondus', ',', 'vin', 'tres', 'harmonieux', '.'],
     ['(', '2017', '-', '2019', ')']
 ]).
+accord(syrah_vin_de_pays_d_oc, viande).
 
 % Côtes du Rhône Villages
 nom(cotes_du_rhone_villages, 'cotes du rhone villages').
@@ -458,6 +475,7 @@ robe(cotes_du_rhone_villages, [['robe', 'pourpre', 'soutenue', '.']]).
 nez(cotes_du_rhone_villages, [['nez', 'intense', 'de', 'fruits', 'rouges', 'murs', '.']]).
 bouche(cotes_du_rhone_villages, [['bouche', 'charnue', ',', 'ronde', 'et', 'epicee', '.']]).
 description(cotes_du_rhone_villages, [['un', 'vin', 'genereux', 'et', 'ensoleille', '.', '(', '2017', '-', '2020', ')']]).
+accord(cotes_du_rhone_villages, viande).
 
 % Tautavel-Côtes du Roussillon Villages
 nom(tautavel_cotes_du_roussillon_villages, 'tautavel-cotes du roussillon villages').
@@ -480,6 +498,8 @@ description(tautavel_cotes_du_roussillon_villages, [
     ['dense', ',', 'puissante', ',', 'juteuse', 'et'],
     ['harmonieuse', '.', '(', '2017', '-', '2019', ')']
 ]).
+accord(tautavel_cotes_du_roussillon_villages, viande).
+accord(tautavel_cotes_du_roussillon_villages, gibier).
 
 % Lirac
 nom(lirac, 'lirac').
@@ -498,6 +518,7 @@ bouche(lirac, [
     ['et', 'epicees', '(', 'aiguilles', 'de', 'pin', ',', 'eucalyptus', ')', '.']
 ]).
 description(lirac, [['grande', 'annee', ',', 'laisse', 'un', 'tres', 'agreable', 'souvenir', '.']]).
+accord(lirac, viande).
 
 % Cairanne
 nom(cairanne, 'cairanne').
@@ -510,6 +531,8 @@ robe(cairanne, [['belle', 'robe', 'rubis', '.']]).
 nez(cairanne, [['aromes', 'de', 'petits', 'fruits', 'noirs', 'et', 'de', 'poivre', '.']]).
 bouche(cairanne, [['belle', 'structure', 'avec', 'des', 'tannins', 'fins', '.']]).
 description(cairanne, [['un', 'vin', 'equilibre', 'et', 'plein', 'de', 'finesse', '.', '(', '2017', '-', '2021', ')']]).
+accord(cairanne, viande).
+accord(cairanne, gibier).
 
 % Beaumes de Venise
 nom(beaumes_de_venise, 'beaumes de venise').
@@ -522,6 +545,7 @@ robe(beaumes_de_venise, [['robe', 'cerise', 'brillante', '.']]).
 nez(beaumes_de_venise, [['nez', 'fruite', 'et', 'floral', '(', 'pivoine', ',', 'violette', ')', '.']]).
 bouche(beaumes_de_venise, [['bouche', 'ronde', ',', 'souple', 'et', 'gourmande', '.']]).
 description(beaumes_de_venise, [['un', 'vin de', 'plaisir', ',', 'frais', 'et', 'harmonieux', '.', '(', '2017', '-', '2020', ')']]).
+accord(beaumes_de_venise, viande).
 
 % Vacqueyras
 nom(vacqueyras, 'vacqueyras').
@@ -534,6 +558,8 @@ robe(vacqueyras, [['belle', 'robe', 'grenat', '.']]).
 nez(vacqueyras, [['nez', 'fin', ',', 'aromes', 'de', 'fruits', 'noirs', 'et', 'notes', 'de', 'poivre', '.']]).
 bouche(vacqueyras, [['bouche', 'equilibree', ',', 'ample', 'et', 'genereuse', '.']]).
 description(vacqueyras, [['un', 'vin', 'chaleureux', 'et', 'raffine', '.', '(', '2017', '-', '2021', ')']]).
+accord(vacqueyras, viande).
+accord(vacqueyras, gibier).
 
 % Saint-Joseph
 nom(saint_joseph, 'saint-joseph').
@@ -546,6 +572,8 @@ robe(saint_joseph, [['robe', 'pourpre', 'sombre', '.']]).
 nez(saint_joseph, [['nez', 'complexe', 'de', 'fruits', 'noirs', 'et', 'de', 'fleurs', 'blanches', '.']]).
 bouche(saint_joseph, [['bouche', 'elevee', ',', 'racee', 'aux', 'tannins', 'veloutes', '.']]).
 description(saint_joseph, [['un', 'grand', 'vin', 'du', 'rhone', 'septentrional', '.', '(', '2017', '-', '2022', ')']]).
+accord(saint_joseph, viande).
+accord(saint_joseph, volaille).
 
 % Gigondas
 nom(gigondas, 'gigondas').
@@ -558,6 +586,8 @@ robe(gigondas, [['robe', 'pourpre', 'soutenue', '.']]).
 nez(gigondas, [['aromes', 'intenses', 'de', 'fruits', 'rouges', 'murs', 'et', 'sous-bois', '.']]).
 bouche(gigondas, [['bouche', 'puissante', ',', 'charpentee', 'avec', 'une', 'belle', 'matiere', '.']]).
 description(gigondas, [['un', 'grand', 'classique', 'de', 'la', 'vallee', 'du', 'rhone', '.', '(', '2017', '-', '2023', ')']]).
+accord(gigondas, viande).
+accord(gigondas, gibier).
 
 % Châteauneuf-du-Pape Rouge
 nom(chateauneuf_du_pape_rouge, 'chateauneuf-du-pape rouge').
@@ -570,6 +600,8 @@ robe(chateauneuf_du_pape_rouge, [['robe', 'rubis', 'profond', '.']]).
 nez(chateauneuf_du_pape_rouge, [['nez', 'complexe', 'alliant', 'fruits', 'noirs', ',', 'epices', 'et', 'cuir', '.']]).
 bouche(chateauneuf_du_pape_rouge, [['bouche', 'puissante', ',', 'genereuse', 'et', 'onctueuse', '.']]).
 description(chateauneuf_du_pape_rouge, [['un', 'vin', 'd\'', 'une', 'grande', 'complexite', '.', '(', '2017', '-', '2025', ')']]).
+accord(chateauneuf_du_pape_rouge, viande).
+accord(chateauneuf_du_pape_rouge, gibier).
 
 % Hermitage rouge
 nom(hermitage_rouge, 'hermitage rouge').
@@ -582,6 +614,8 @@ robe(hermitage_rouge, [['robe', 'sombre', 'aux', 'reflets', 'tuiles', '.']]).
 nez(hermitage_rouge, [['bouquet', 'evolue', 'de', 'fruits', 'confits', ',', 'tabac', 'et', 'sous-bois', '.']]).
 bouche(hermitage_rouge, [['bouche', 'noble', ',', 'ample', 'avec', 'une', 'finale', 'persistante', '.']]).
 description(hermitage_rouge, [['un', 'vin', 'd\'', 'exception', 'a', 'maturite', '.', '(', '2017', '-', '2021', ')']]).
+accord(hermitage_rouge, viande).
+accord(hermitage_rouge, gibier).
 
 % Aloxe-Corton
 nom(aloxe_corton, 'aloxe-corton').
@@ -594,6 +628,8 @@ robe(aloxe_corton, [['robe', 'rubis', 'intense', '.']]).
 nez(aloxe_corton, [['nez', 'de', 'petits', 'fruits', 'noirs', 'et', 'de', 'reglisse', '.']]).
 bouche(aloxe_corton, [['bouche', 'puissante', ',', 'structuree', 'et', 'bien', 'equilibrée', '.']]).
 description(aloxe_corton, [['un', 'bourgogne', 'de', 'caractere', '.', '(', '2017', '-', '2024', ')']]).
+accord(aloxe_corton, viande).
+accord(aloxe_corton, gibier).
 
 % Nuits-Saint-Georges 1er Cru
 nom(nuits_saint_georges_1er_cru, 'nuits-saint-georges 1er cru').
@@ -606,6 +642,8 @@ robe(nuits_saint_georges_1er_cru, [['robe', 'grenat', 'profonde', '.']]).
 nez(nuits_saint_georges_1er_cru, [['nez', 'raffine', 'de', 'fruits', 'rouges', 'et', 'notes', 'sauvages', '.']]).
 bouche(nuits_saint_georges_1er_cru, [['bouche', 'racee', ',', 'dense', 'avec', 'une', 'grande', 'finesse', '.']]).
 description(nuits_saint_georges_1er_cru, [['un', 'grand', 'vin', 'de', 'la', 'cote', 'de', 'nuits', '.', '(', '2017', '-', '2026', ')']]).
+accord(nuits_saint_georges_1er_cru, viande).
+accord(nuits_saint_georges_1er_cru, gibier).
 
 % Chambolle-Musigny
 nom(chambolle_musigny, 'chambolle-musigny').
@@ -618,6 +656,8 @@ robe(chambolle_musigny, [['robe', 'rubis', 'claire', '.']]).
 nez(chambolle_musigny, [['nez', 'floral', 'et', 'fruite', '(', 'framboise', ',', 'violette', ')', '.']]).
 bouche(chambolle_musigny, [['bouche', 'elegante', ',', 'soyeuse', 'et', 'tres', 'feminine', '.']]).
 description(chambolle_musigny, [['la', 'dentelle', 'de', 'la', 'bourgogne', '.', '(', '2017', '-', '2024', ')']]).
+accord(chambolle_musigny, viande).
+accord(chambolle_musigny, volaille).
 
 % ------------------------------ Beaujolais -------------------------
 % Chiroubles
@@ -631,6 +671,8 @@ robe(chiroubles, [['robe', 'legere', 'et', 'brillante', '.']]).
 nez(chiroubles, [['nez', 'tres', 'fin', 'aux', 'notes', 'de', 'violette', 'et', 'muguet', '.']]).
 bouche(chiroubles, [['bouche', 'tendre', ',', 'elegante', 'et', 'pleine', 'de', 'finesse', '.']]).
 description(chiroubles, [['le', 'plus', 'bourguignon', 'des', 'beaujolais', '.', '(', '2017', '-', '2019', ')']]).
+accord(chiroubles, viande).
+accord(chiroubles, volaille).
 
 % Fleurie
 nom(fleurie, 'fleurie').
@@ -643,6 +685,7 @@ robe(fleurie, [['robe', 'carmin', 'intense', '.']]).
 nez(fleurie, [['nez', 'floral', 'et', 'fruite', '(', 'iris', ',', 'violette', ',', 'fruits', 'rouges', ')', '.']]).
 bouche(fleurie, [['bouche', 'raffinée', ',', 'souple', 'et', 'veloutee', '.']]).
 description(fleurie, [['un', 'vin', 'élégant', 'et', 'plein', 'de', 'charme', '.', '(', '2017', '-', '2021', ')']]).
+accord(fleurie, volaille).
 
 % Moulin-a-Vent
 nom(moulin_a_vent, 'moulin-a-vent').
@@ -655,6 +698,7 @@ robe(moulin_a_vent, [['robe', 'grenat', 'sombre', '.']]).
 nez(moulin_a_vent, [['aromes', 'de', 'fruits', 'noirs', 'et', 'notes', 'epicees', '.']]).
 bouche(moulin_a_vent, [['bouche', 'charpentee', ',', 'puissante', 'et', 'complexe', '.']]).
 description(moulin_a_vent, [['le', 'seigneur', 'des', 'beaujolais', '.', '(', '2017', '-', '2023', ')']]).
+accord(moulin_a_vent, viande).
 
 % ------------------------------ Bourgogne -------------------------
 % Coteaux Bourguignons
@@ -677,6 +721,7 @@ description(coteaux_bourguignons, [
     ['un', 'vin', 'plaisir', ',', 'frais', 'et', 'fruite', '.'],
     ['(', '2017', '-', '2019', ')']
 ]).
+accord(coteaux_bourguignons, viande).
 
 % Bourgogne Pinot Noir
 nom(bourgogne_pinot_noir, 'bourgogne pinot noir').
@@ -701,6 +746,8 @@ description(bourgogne_pinot_noir, [
     ['un', 'vin', 'gouleyant', ',', 'typique', 'du', 'cepage'],
     ['pinot', 'noir', '.', '(', '2017', '-', '2020', ')']
 ]).
+accord(bourgogne_pinot_noir, viande).
+accord(bourgogne_pinot_noir, volaille).
 
 % Hautes-Cotes de Nuits
 nom(hautes_cotes_de_nuits, 'hautes-cotes de nuits').
@@ -724,6 +771,7 @@ description(hautes_cotes_de_nuits, [
     ['un', 'vin', 'equilibre', 'et', 'plein', 'de', 'caractere', '.'],
     ['(', '2017', '-', '2022', ')']
 ]).
+accord(hautes_cotes_de_nuits, viande).
 
 % Savigny-les-Beaune
 nom(savigny_les_beaune, 'savigny-les-beaune').
@@ -747,6 +795,7 @@ description(savigny_les_beaune, [
     ['un', 'grand', 'classique', 'de', 'la', 'cote', 'de'],
     ['beaune', '.', '(', '2017', '-', '2023', ')']
 ]).
+accord(savigny_les_beaune, viande).
 
 % Savigny-les-Beaune 1er cru
 nom(savigny_les_beaune_1er_cru, 'savigny-les-beaune 1er cru').
@@ -770,6 +819,8 @@ description(savigny_les_beaune_1er_cru, [
     ['un', 'vin', 'noble', 'et', 'tres', 'persistant', '.'],
     ['(', '2017', '-', '2025', ')']
 ]).
+accord(savigny_les_beaune_1er_cru, viande).
+accord(savigny_les_beaune_1er_cru, gibier).
 
 % ------------------------------ Val de Loire -------------------------
 % Chinon Vieilles Vignes 2014
@@ -796,6 +847,8 @@ description(chinon_vieilles_vignes, [
     ['un', 'magnifique', 'chinon', ',', 'puissant', 'et', 'tres', 'bien', 'type', '.'],
     ['gastronomique', '.']
 ]).
+accord(chinon_vieilles_vignes, viande).
+accord(chinon_vieilles_vignes, volaille).
 
 % Sancerre rouge 2015
 nom(sancerre_rouge, 'Sancerre rouge 2015').
@@ -821,6 +874,8 @@ bouche(sancerre_rouge, [
 description(sancerre_rouge, [
     ['description', 'indisponible', '.']
 ]).
+accord(sancerre_rouge, viande).
+accord(sancerre_rouge, volaille).
 
 % ------------------------------ Vins Blancs -------------------------
 % Les Guignards 2015
@@ -848,6 +903,7 @@ bouche(les_guignards, [
 description(les_guignards, [
     ['tres', 'polyvalent', '.', 'delicieux', '!']
 ]).
+accord(les_guignards, poisson).
 
 % Chardonnay Exception 2016
 nom(chardonnay_exception, 'Chardonnay Exception 2016-Vin de Pays d\'Oc').
@@ -875,6 +931,8 @@ description(chardonnay_exception, [
     ['note', 'boisee', 'tout', 'au', 'long', 'de', 'la'],
     ['degustation', '.']
 ]).
+accord(chardonnay_exception, poisson).
+accord(chardonnay_exception, volaille).
 
 % Cotes du Rhone 2016
 nom(cotes_du_rhone_blanc, 'Cotes du Rhone 2016 Cuvee Pierre et Charlotte').
@@ -903,6 +961,7 @@ description(cotes_du_rhone_blanc, [
     ['equilibre', '.', 'frais', 'et', 'gourmand', '.', 'un'],
     ['maitre-achat', '!']
 ]).
+accord(cotes_du_rhone_blanc, poisson).
 
 % Ch. Le Druc 2015
 nom(ch_le_druc, 'Ch. Le Druc 2015-Graves').
@@ -928,6 +987,7 @@ bouche(ch_le_druc, [
 description(ch_le_druc, [
     ['excellent', 'rapport', 'qualite', 'prix', '.']
 ]).
+accord(ch_le_druc, poisson).
 
 % Laudun 2016
 nom(laudun_blanc, 'Laudun 2016-Cotes du Rhone Villages').
@@ -955,6 +1015,8 @@ description(laudun_blanc, [
     ['d\'', 'un', 'vin', 'important', 'aux', 'saveurs'],
     ['persistantes', '.', 'une', 'magnifique', 'decouverte', '!']
 ]).
+accord(laudun_blanc, poisson).
+accord(laudun_blanc, volaille).
 
 % Vouvray blanc sec 2016
 nom(vouvray_blanc_sec, 'Vouvray blanc sec 2016').
@@ -982,6 +1044,7 @@ bouche(vouvray_blanc_sec, [
 description(vouvray_blanc_sec, [
     ['description', 'indisponible', '.']
 ]).
+accord(vouvray_blanc_sec, poisson).
 
 % Macon Villages 2015
 nom(macon_villages, 'Macon-Villages 2015').
@@ -1009,6 +1072,8 @@ description(macon_villages, [
     ['un', 'bourgogne', 'blanc', 'comme', 'on', 'les'],
     ['aime', '!', 'delicieux', '.']
 ]).
+accord(macon_villages, poisson).
+accord(macon_villages, volaille).
 
 % Pinot Gris 2015
 nom(pinot_gris, 'Pinot Gris 2015').
@@ -1032,6 +1097,8 @@ bouche(pinot_gris, [
 description(pinot_gris, [
     ['delicieux', '.']
 ]).
+accord(pinot_gris, poisson).
+accord(pinot_gris, volaille).
 
 % Gewurztraminer 2015
 nom(gewurztraminer, 'Gewurztraminer 2015').
@@ -1059,6 +1126,7 @@ description(gewurztraminer, [
     ['finale', 'distinguee', ',', 'laissant', 'un'],
     ['agreable', 'souvenir', '.']
 ]).
+accord(gewurztraminer, volaille).
 
 % Vire-Clesse 2016
 nom(vire_clesse, 'Vire-Clesse 2016').
@@ -1086,6 +1154,7 @@ description(vire_clesse, [
     ['maconnais', ',', 'avec', 'beaucoup', 'de', 'race', ','],
     ['de', 'complexite', 'et', 'de', 'concentration', '.']
 ]).
+accord(vire_clesse, poisson).
 
 % Sancerre blanc 2015
 nom(sancerre_blanc, 'Sancerre blanc 2015-Vignoble de Verdigny').
@@ -1110,6 +1179,7 @@ bouche(sancerre_blanc, [
 description(sancerre_blanc, [
     ['un', 'grand', 'classique', '.']
 ]).
+accord(sancerre_blanc, poisson).
 
 % Vacqueyras 2016
 nom(vacqueyras_blanc, 'Vacqueyras 2016').
@@ -1137,6 +1207,7 @@ bouche(vacqueyras_blanc, [
 description(vacqueyras_blanc, [
     ['tout', 'simplement', 'delicieux', '!']
 ]).
+accord(vacqueyras_blanc, poisson).
 
 % Hautes Cotes de Beaune 2015
 nom(hautes_cotes_de_beaune, 'Hautes Cotes de Beaune 2015').
@@ -1164,6 +1235,8 @@ description(hautes_cotes_de_beaune, [
     ['magnifique', 'bourgogne', 'gastronomique', ',', 'dans'],
     ['un', 'excellent', 'rapport', 'plaisir/prix', '.']
 ]).
+accord(hautes_cotes_de_beaune, poisson).
+accord(hautes_cotes_de_beaune, volaille).
 
 % Pouilly-Fuissé 2014
 nom(pouilly_fuisse, 'Pouilly-Fuissé 2014').
@@ -1191,6 +1264,8 @@ bouche(pouilly_fuisse, [
 description(pouilly_fuisse, [
     ['pour', 'crustaces', 'et', 'poissons', 'en', 'sauce', '.']
 ]).
+accord(pouilly_fuisse, poisson).
+accord(pouilly_fuisse, volaille).
 
 % Chablis 1er Cru 2014
 nom(chablis_1er_cru, 'Chablis 1er Cru Montmains 2014').
@@ -1219,6 +1294,7 @@ description(chablis_1er_cru, [
     ['tres', 'race', ',', 'pour', 'les', 'amateurs', 'de'],
     ['l\'', 'aoc', '.']
 ]).
+accord(chablis_1er_cru, poisson).
 
 % Condrieu 2015
 nom(condrieu, 'Condrieu 2015').
@@ -1246,6 +1322,7 @@ description(condrieu, [
     ['france', '.', 'voici', 'un', 'tres', 'grand', 'vin', 'des'],
     ['cotes', 'du', 'rhone', '.', 'superbe', '.']
 ]).
+accord(condrieu, poisson).
 
 
 % ------------------------------ Champagnes -------------------------
@@ -1270,6 +1347,7 @@ description(champagne_brut_selection, [
     ['un', 'champagne', 'frais', 'et', 'elegant', ',', 'ideal'],
     ['pour', 'l\'', 'aperitif', '.']
 ]).
+accord(champagne_brut_selection, poisson).
 
 % Champagne Brut Blanc de Blancs
 nom(champagne_brut_blanc_de_blancs, 'Champagne Brut Blanc de Blancs').
@@ -1293,6 +1371,7 @@ description(champagne_brut_blanc_de_blancs, [
     ['100%', 'chardonnay', ',', 'un', 'vin', 'd\'', 'une', 'grande'],
     ['distinction', '.']
 ]).
+accord(champagne_brut_blanc_de_blancs, poisson).
 
 % Champagne Brut Rose
 nom(champagne_brut_rose, 'Champagne Brut Rose').
@@ -1315,6 +1394,7 @@ description(champagne_brut_rose, [
     ['un', 'champagne de', 'plaisir', ',', 'tout', 'en'],
     ['souplesse', '.']
 ]).
+accord(champagne_brut_rose, volaille).
 
 % Champagne Brut Prestige
 nom(champagne_brut_prestige, 'Champagne Brut Prestige').
@@ -1338,6 +1418,7 @@ description(champagne_brut_prestige, [
     ['cuvee', '100%', 'grand', 'cru', 'bouzy', 'remarquable'],
     ['pour', 'sa', 'finesse', 'et', 'sa', 'puissance', '.']
 ]).
+accord(champagne_brut_prestige, poisson).
 
 % ------------------------------ Cognacs -------------------------
 % Cognac Trois Etoiles
