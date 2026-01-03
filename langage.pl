@@ -52,9 +52,14 @@ simil(millesimes,millesime).
 
 simil(mets,accord).
 simil(plat,accord).
-simil(accompagnent,accord).
+simil(plats,accord).
+simil(accompagne,accord).
+simil(accompagner,accord).
+simil(accompagnement,accord).
+simil(accompagnements,accord).
 simil(repas,accord).
 simil(manger,accord).
+simil(accords,accord).
 
 simil(poulet,volaille).
 simil(canard,volaille).
