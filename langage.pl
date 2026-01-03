@@ -45,6 +45,7 @@ simil(decris,description).
 simil(max,maximum).
 simil(min,minimum).
 
+simil(an,millesime).
 simil(annee,millesime).
 simil(annees,millesime).
 simil(millesimes,millesime).
@@ -72,6 +73,7 @@ simil(bordelais,bordeaux).
 
 simil(exceptionnel, exception).
 simil(exceptionnels, exception).
+
 
 %---------- fusion : normalisation de mots du langage ----------
 fusion([auriez,vous],auriezvous).
