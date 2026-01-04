@@ -97,6 +97,8 @@ fusion([a,partir,de],minimum).
 fusion([pinot,noir],pinotnoir).
 fusion([cote,rhone],rhone).
 fusion([cotes,rhone],rhone).
+fusion([cotes,du,rhone],rhone).
+fusion([cote,du,rhone],rhone).
 fusion([vallee,du,rhone],rhone).
 fusion([languedoc],rhone).
 
