@@ -30,9 +30,13 @@ mclef(poisson,5).
 mclef(gibier,5).
 
 mclef(bordeaux,5).
+mclef(bourgogne,5).
+mclef(beaujolais,5).
+mclef(rhone,5).
 mclef(champagne,5).
 mclef(cognac,5).
 mclef(pinotnoir,5).
+mclef(loire,5).
 
 mclef(rouge,5).
 mclef(blanc,5).
@@ -71,13 +75,3 @@ find_vin([Head|Tail],[Head|T]):-
     find_vin(Tail,T).
 find_vin([_|Tail],L):-
     find_vin(Tail,L).
-
-/*=====================================
-        LIER MCLES, VINS ET NOMBRES (obsolète - n’est plus utilisé)
-=======================================*/
-lier_finds(Lin,Lout):-
-    find_mclef(Lin,CleOut),
-    find_num(Lin,NumOut),
-    find_vin(Lin,VinOut),
-    append(CleOut,NumOut,TmpOut),
-    append(VinOut,TmpOut,Lout).

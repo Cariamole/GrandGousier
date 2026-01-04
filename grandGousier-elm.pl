@@ -312,20 +312,16 @@ grandgousier :-
    repeat,
       write('Vous : '),
       lire_question(L_Mots),
-      %rewrite(L_Mots,NL_Mots),
-      %fusionne(NL_Mots,NNL_Mots),
+
       fusionne(L_Mots,NL_Mots),
       rewrite(NL_Mots,NNL_Mots),
-      
       
       find_mclef(NNL_Mots,LMClef),%write(LMClef),nl,
       find_vin(NNL_Mots,LVin),%write(LVin),nl,
       find_num(NNL_Mots,LNum),%write(LNum),nl,
-      %lier_finds(NNL_Mots,L_Mcle),
-      %write(L_Mcle),nl,
+
       produire_reponse(LMClef,LVin,LNum,L_ligne_reponse),
-      %regle_rep(LMClef,LVin,LNum,L_ligne_reponse),
-      %produire_reponse(L_Mcle,L_ligne_reponse),
+
       ecrire_reponse(L_ligne_reponse),
    fin(NNL_Mots), !.
    

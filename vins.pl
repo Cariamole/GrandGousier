@@ -37,8 +37,8 @@ critere(Vin,beaujolais):-
 critere(Vin,rhone):-
   region(Vin,rhone).
 
-critere(Vin,val_de_loire):-
-  region(Vin,val_de_loire).
+critere(Vin,loire):-
+  region(Vin,loire).
 
 critere(Vin,champagne):-
   region(Vin,champagne).
@@ -735,7 +735,7 @@ accord(savigny_les_beaune_1er_cru, gibier).
 % ------------------------------ Val de Loire -------------------------
 % Chinon Vieilles Vignes 2014
 nom(chinon_vieilles_vignes, 'Chinon Vieilles Vignes 2014').
-region(chinon_vieilles_vignes, 'val de loire').
+region(chinon_vieilles_vignes, 'loire').
 appellation(chinon_vieilles_vignes, 'chinon').
 couleur(chinon_vieilles_vignes, 'rouge').
 annee(chinon_vieilles_vignes, 2014).
@@ -762,7 +762,7 @@ accord(chinon_vieilles_vignes, volaille).
 
 % Sancerre rouge 2015
 nom(sancerre_rouge, 'Sancerre rouge 2015').
-region(sancerre_rouge, 'val de loire').
+region(sancerre_rouge, 'loire').
 appellation(sancerre_rouge, 'sancerre').
 couleur(sancerre_rouge, 'rouge').
 annee(sancerre_rouge, 2015).
@@ -930,7 +930,7 @@ accord(laudun_blanc, volaille).
 
 % Vouvray blanc sec 2016
 nom(vouvray_blanc_sec, 'Vouvray blanc sec 2016').
-region(vouvray_blanc_sec, 'val de loire').
+region(vouvray_blanc_sec, 'loire').
 appellation(vouvray_blanc_sec, 'vouvray').
 couleur(vouvray_blanc_sec, 'blanc').
 annee(vouvray_blanc_sec, 2016).
@@ -1068,7 +1068,7 @@ accord(vire_clesse, poisson).
 
 % Sancerre blanc 2015
 nom(sancerre_blanc, 'Sancerre blanc 2015-Vignoble de Verdigny').
-region(sancerre_blanc, 'val de loire').
+region(sancerre_blanc, 'loire').
 appellation(sancerre_blanc, 'sancerre').
 couleur(sancerre_blanc, 'blanc').
 annee(sancerre_blanc, 2015).
