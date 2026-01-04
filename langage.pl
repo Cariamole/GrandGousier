@@ -60,6 +60,7 @@ simil(accompagnements,accord).
 simil(repas,accord).
 simil(manger,accord).
 simil(accords,accord).
+simil(accorde,accord).
 
 simil(poulet,volaille).
 simil(canard,volaille).

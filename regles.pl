@@ -10,7 +10,7 @@ regle_rep([],[Vin],[],Rep):-
    appellation(Vin, Appellation),
    annee(Vin,Annee),
    prix(Vin,Prix),
-   Rep = [[ Nom,Annee,'est un vin de', Region, ':', Appellation, '(', Prix, ' EUR )' ]].
+   Rep = [[ Nom,Annee,'est un vin de', Region, ',',d,appellation, Appellation, '(', Prix, ' EUR )' ]].
 
 %--------------Bouche---------------
 

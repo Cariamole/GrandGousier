@@ -37,8 +37,8 @@ produire_reponse(LCle,LVin,LNum, Rep) :-
       regle_rep(LCle, LVin, LNum, Rep), !.
 
 produire_reponse(_,_,_,[L1,L2]) :-
-   L1 = [je, ne, sais, pas, '.'],
-   L2 = [veuillez,reessayer,dans,d,'\'',autres,termes].
+   L1 = [je, ne, sais, pas, '.',veuillez,reessayer,dans,d,'\'',autres,termes],
+   L2 = [ou,ecrivez,' ','\'',fin,'\'',' ', pour, terminer, le, programme].
 
 % ----------------------------------------------------------------%
 
@@ -318,9 +318,9 @@ grandgousier :-
       rewrite(NL_Mots,NNL_Mots),
       
       
-      find_mclef(NNL_Mots,LMClef),write(LMClef),nl,
-      find_vin(NNL_Mots,LVin),write(LVin),nl,
-      find_num(NNL_Mots,LNum),write(LNum),nl,
+      find_mclef(NNL_Mots,LMClef),%write(LMClef),nl,
+      find_vin(NNL_Mots,LVin),%write(LVin),nl,
+      find_num(NNL_Mots,LNum),%write(LNum),nl,
       %lier_finds(NNL_Mots,L_Mcle),
       %write(L_Mcle),nl,
       produire_reponse(LMClef,LVin,LNum,L_ligne_reponse),
